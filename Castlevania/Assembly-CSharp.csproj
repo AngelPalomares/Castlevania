@@ -64,9 +64,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Behaviour\AbstractBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Duck.cs" />
     <Compile Include="Assets\Scripts\Behaviour\FaceDirection.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Jump.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\LongJump.cs" />
     <Compile Include="Assets\Scripts\Behaviour\SimpleMovement.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\StickToWall.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Walk.cs" />
+    <Compile Include="Assets\Scripts\Collision\CollisionState.cs" />
+    <Compile Include="Assets\Scripts\Effects\Dust.cs" />
+    <Compile Include="Assets\Scripts\GraplingHook.cs" />
     <Compile Include="Assets\Scripts\Input\InputManager.cs" />
     <Compile Include="Assets\Scripts\Input\InputState.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />

@@ -7,6 +7,8 @@ public enum Buttons
     Right,
     Left,
     A,
+    Jump,
+    Down,
 }
 
 public enum Condition

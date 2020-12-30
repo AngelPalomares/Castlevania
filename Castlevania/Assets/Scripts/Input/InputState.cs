@@ -29,9 +29,10 @@ public class InputState : MonoBehaviour
         body2D = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        
+        absVelX = Mathf.Abs(body2D.velocity.x);
+        absVelY = Mathf.Abs(body2D.velocity.y);
     }
 
     public void SetButtonValue(Buttons key, bool value)
@@ -62,5 +63,15 @@ public class InputState : MonoBehaviour
         }
         else
             return false;
+    }
+
+    public float GetButtonHoldTime(Buttons key)
+    {
+        if (buttonStates.ContainsKey(key))
+        {
+            return buttonStates[key].holdTime;
+        }
+        else
+            return 0;
     }
 }

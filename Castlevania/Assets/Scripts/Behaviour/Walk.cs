@@ -6,6 +6,7 @@ public class Walk : AbstractBehaviour
 {
     public float speed = 50f;
     public float runMultiploier = 2f;
+    public bool running;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class Walk : AbstractBehaviour
     // Update is called once per frame
     void Update()
     {
+        running = false;
         var Right = inputState.GetButtonValue(InputButtons[0]);
         var left = inputState.GetButtonValue(InputButtons[1]);
         var Run = inputState.GetButtonValue(InputButtons[2]);
@@ -26,6 +28,7 @@ public class Walk : AbstractBehaviour
             if(Run && runMultiploier > 0)
             {
                 tmpSpeed *= runMultiploier;
+                running = true;
             }
 
 
